@@ -1,0 +1,84 @@
+@import './../../../../mixins';
+
+.calendar {
+    font-family: "Roboto Condensed", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+
+    @include on-desktop {
+        flex-direction: row;
+    }
+
+    & > * {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    &__btn {
+        cursor: pointer;
+        display: flex; 
+        max-width: 160px;
+        max-height: 40px;
+        height: 40px;
+        width: 160px;
+        border-radius: 10px;
+        background-color: var(--bgc-button);
+        color: var(--color-button);
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        order: 1;
+        margin-bottom: 10px;
+
+        @include on-tablet {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        @include on-desktop {
+            order: initial;
+            max-width: 160px;
+            width: 160px;
+            height: 40px;
+            margin: 0;
+        }
+
+        &:hover {
+            background-color: var(--bgc-button-hover);
+        }
+
+        &__link {
+            text-decoration: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row;
+
+        &--vaccine-info {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+    
+            @include on-tablet {
+                flex-direction: row;
+            }
+            
+            @include on-desktop {
+                flex-direction: column;
+            }
+        }
+    }
+}

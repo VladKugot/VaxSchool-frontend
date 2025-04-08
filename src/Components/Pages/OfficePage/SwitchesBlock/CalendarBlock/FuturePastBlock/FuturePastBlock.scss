@@ -1,0 +1,80 @@
+@import '../../../../../mixins';
+
+.future-past-block {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 0;
+
+    @include on-tablet {
+        padding: 20px;
+    }
+
+    &__select {
+
+        width: 100px;
+        height: 40px;
+
+        @include custom-select();
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &--one {
+                display: flex;
+                flex-direction: column;
+                gap: 5px; 
+            }
+        }
+
+        &--title {
+            font-size: 12px;
+            color: var(--color-info-select-title);
+            margin: 0;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    &__list {
+        margin: 0;
+        height: 100%;
+        background-color: var(--bgc-block);
+        border-radius: 10px;
+        border: 1px solid var(--border-switch);
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        color: inherit;
+
+        @include underline-hover();
+
+        &:hover {
+            color: var(--color-info-hover-text);
+            transform: scale(1.05);
+        }
+    }
+}

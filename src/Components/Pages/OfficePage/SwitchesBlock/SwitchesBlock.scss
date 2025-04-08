@@ -1,0 +1,112 @@
+@import './../../../mixins';
+
+.switch {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px var(--box-shadow--color);
+        border-radius: 10px;
+        background-color: var(--bgc-switch-hover);
+        border: 1px solid var(--border-switch-hover);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+        box-shadow: 0 4px 8px var(--box-shadow--color);
+
+        @include on-desktop {
+            padding: 10px;
+            border-radius: 10px;
+            flex-direction: column;
+            width: 230px;
+            gap: 25px;
+        }
+    }
+
+    &__content-container {
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 4px 8px var(--box-shadow--color);
+        border-radius: 10px;
+        display: flex;
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: fade-in 0.3s ease-in-out forwards;
+    }
+
+    &--active {
+        border-radius: 10px;
+        background-color: var(--bgc-switch-active);
+        border: 1px solid var(--border-switch-active);
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px var(--box-shadow--color);
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Roboto Condensed";
+        transition: color 0.3s;
+        display: none;
+
+        @include on-tablet {
+            display: block;
+        }
+
+    }
+
+    &--active &__title {
+        color: var(--color-button);
+    }
+
+    &__icon {
+        height: 64px;
+        width: 64px;
+        background-position: center;
+        background-size: cover;
+        transition: background-color 0.3s, transform 0.3s;
+
+        &--1 {
+            background-image: var(--img-switch-1);
+        }
+        &--2 {
+            background-image: var(--img-switch-2);
+        }
+        &--3 {
+            background-image: var(--img-switch-3);
+        }
+    }
+
+    &--active &__icon {
+        transform: scale(1.1);
+        filter: brightness(0) invert(1);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,120 @@
+@import '../../../mixins';
+
+.my-vaccine {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include on-desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    &__block {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__about-me {
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 0;
+
+            &--text {
+                margin: 0;
+                font-size: 16px;
+                color: var(--color-table-text);
+                
+                @include on-tablet {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 0;
+        padding: 5px;
+        
+        &--good {
+            background-color: var(--bgc-good);
+            border: 1px solid var(--border-good);
+            margin: 0;
+            font-size: 16px;
+            color: var(--color-table-text);
+            justify-content: center;
+          }
+          
+          &--upcoming {
+            background-color: var(--bgc-upcoming);
+            border: 1px solid var(--border-upcoming);
+          }
+          
+          &--overdue {
+            background-color: var(--bgc-overdue);
+            border: 1px solid var(--border-overdue);
+          }
+
+        &--text {
+            margin: 0;
+            font-size: 16px;
+            color: var(--color-table-text);
+            width: 175px;
+        }
+
+        &--block{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &--btn {
+            height: 25px;
+            width: 125px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--bgc-button);
+            color: var(--color-button);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--bgc-button-hover);
+            }
+        }
+    }
+}

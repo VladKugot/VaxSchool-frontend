@@ -1,0 +1,99 @@
+@import '../../mixins';
+
+.table {
+    border-spacing: 0 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: var(--bgc-table);
+    border-radius: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px var(--box-shadow--color);
+    margin-top: 20px;
+    display: block;
+    table-layout: fixed;
+
+    @include custom-scrollbar;
+
+    @include on-tablet {
+        max-height: 500px;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__title {
+        &--item {
+            font-size: 10px;
+            text-align: left;
+            align-items: center;
+        }
+    }
+
+    &__head {
+        width: 100%;
+    }
+
+    &__body {
+        width: 100%;
+    }
+
+    &__line {
+        width: 100%;
+        border: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--bgc-table-hover);
+        }
+
+        &--item {
+            color: var(--color-table-text);
+            font-size: 12px;
+            line-height: 14px;
+            padding: 5px;
+            width: 100%;
+            word-wrap: break-word;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+
+            @include on-tablet {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        &--delete {
+            width: 16px;
+            height: 16px;
+            background-image: var(--img-delete);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            @include hover(transform, scale(1.05))
+
+        }
+
+        &--good {
+            background-color: var(--bgc-good);
+        }
+
+        &--prog {
+            background-color: var(--bgc-upcoming);
+        }
+
+        &--warning {
+            background-color: var(--bgc-overdue);
+        }
+    }
+}
+
+td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

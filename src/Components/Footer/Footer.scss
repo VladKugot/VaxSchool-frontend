@@ -1,0 +1,94 @@
+@import '../mixins';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgc-footer);
+  height: 200px;
+  padding-right: 32px;
+  box-shadow: 0 4px 10px var(--box-shadow--color);
+  z-index: 10;
+
+  @include on-tablet {
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 90px;
+    width: 90px;
+    align-items: center;
+
+    margin: auto 50px auto 16px;
+    background-image: var(--logo);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include hover(transform, scale(1.1));
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    line-height: 12px;
+    justify-content: center;
+    margin-left: 16px;
+
+    @include on-tablet {
+      margin-left: 40px;
+    }
+
+    @include on-desktop {
+      width: 400px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+  }
+}
+
+.back-top {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700px;
+    color: var(--color-back-top);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+  }
+
+  &__img {
+    height: 16px;
+    width: 16px;
+    padding: 8px;
+    align-items: center;
+    border: 2px solid var(--color-back-top);
+    border-radius: 50%;
+    background-image: var(--arrow-top);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:hover {
+      background-color: var(--color-back-top);
+      background-image: var(--arrow-top-hover);
+    }
+  }
+}

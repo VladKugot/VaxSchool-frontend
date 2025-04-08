@@ -1,0 +1,279 @@
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color);
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background-gradient: linear-gradient(to bottom, #FBEFFF, #EFFDFF);
+  --text-color: #701890;
+  --text-color-data: #000;
+  --scrollbar-color: #701890 #f3f3f3;
+  --bgc-header: #E6E6FF;
+  --bgc-footer: #E6E6FF;
+  --bgc-main-info: rgba(112, 24, 144, 0.75);
+  --bgc-block: #fff;
+  --bgc-button: #701890;
+  --bgc-button-hover: #5a0f6b;
+  --bgc-table: #EEEEFE ;
+  --bgc-table-hover: #B0B0FF;
+  --bgc-switch-hover: #B0B0FF;
+  --bgc-switch-active: #62FEA8;
+  --bgc-calendar: #F3FAFF;
+  --bgc-calendar-block: #F3FAFF;
+  --bgc-calendar-block-hover: #E5F2FF;
+  --bgc-calendar-title: #EBF6FD;
+  --bgc-info-block: rgba(221, 37, 147, 0.7);
+  --bgc-info-block-reserved: #288DC8;
+  --bgc-years-selected: #701890;
+  --bgc-section: #F3FAFF;
+  --bgc-vaccine-title: #F9F2FF;
+
+  --border-switch-hover: #B0B0FF;
+  --border-switch-active: #62FEA8;
+  --border-switch: #DCDCFF;
+  --border-years: #DCDCFF;
+  --border-section: #DCDCFF;
+  --border-calendar-block-hover: #B3B3FF;
+  --border-select:#DCDCFF;
+  --border-select-focus: #9A70FF;
+  --border-select-hover: #b3a0ff;
+  --border-color-teacher: #9696FC;
+  --border-color-hover-teacher: #701890;
+  --border-color-focus-teacher: #701890;
+
+  --border-color-input: #9696FC;
+  --border-color-hover-input: #701890;
+  --border-color-focus-input: #701890;
+
+
+  --color-button: #FBEFFF;
+  --color-hover-link-header: #701890;
+  --color-link-header: #031C3B;
+  --color-back-top: #701890;
+  --color-main: #701890;
+  --color-main-info: #fff;
+  --color-info-block: #FBEFFF;
+  --color-info-block-active: #22A92B;
+  --color-years-selected: #fff;
+  --color-line-hover: #DCDCFF;
+
+  --color-info-hover-text: #b0b0ff;
+  --color-info-active-text: #DCDCFF;
+  --color-info-select-title: #bfbffd;
+
+  --color-calendar: #288DC8;
+  --color-contacts: #DD2593;
+  --color-info: #22A92B;
+  --spiner-color: #62FEA8;
+  --spiner-border: #ccc;
+
+  --color-table-text: #000;
+  
+
+  --bgc-input: #DEC8E6;
+  --color-input: #701890;
+  --border-input: #701890;
+  --bgc-input-hover: #d1b3df;
+  --border-input-hover: #5e157a;
+  --bgc-input-focus: #fff;
+  --border-input-focus: #4a1060;
+  --bgc-input-active: #fff;
+  --border-input-active: #3d0d4f;
+
+  --input-placeholder-color-teacher: #9696FC;
+
+  --box-shadow--color: rgba(0, 0, 0, 0.2);
+  --box-shadow-years--color: rgba(112, 24, 144, 0.6);
+  --box-shadow-years-buttton--color: rgba(220, 220, 225, 0.6);
+  --box-shadow-select: rgba(154, 112, 255, 0.5);
+  --box-shadow-focus-teacher: rgba(112, 24, 144, 0.5);
+
+  --bgc-good: rgba(98, 254, 168, 0.43);
+  --border-good: rgba(98, 254, 168, 0.43);
+  --bgc-upcoming: rgba(254, 251, 98, 0.75);
+  --border-upcoming: rgb(252, 249, 57);
+  --bgc-overdue: rgba(254, 98, 98, 0.43);
+  --border-overdue: rgba(254, 98, 98, 0.43);
+
+  --bgc-calendar-completed: rgba(98, 254, 168, 0.75);
+  --bgc-calendar-future: rgba(254, 251, 98, 0.75);
+  --bgc-calendar-not-done: rgba(254, 98, 98, 0.75);
+
+  --logo: url(./icon/light/logo.png);
+  --language: url(./icon/light/language.svg);
+  --them: url(./icon/light/swithes.svg);
+  --exit: url(./icon/light/exit.svg);
+  --user: url(./icon/light/user.svg);
+  --page: url(./icon/light/page.svg);
+  --language-hover: url(./icon/light/language-hover.svg);
+  --them-hover: url(./icon/light/swithes-hover.svg);
+  --exit-hover: url(./icon/light/exit-hover.svg);
+  --user-hover: url(./icon/light/user-hover.svg);
+  --page-hover: url(./icon/light/page-hover.svg);
+  --arrow-top: url(./icon/light/arrow-top.svg);
+  --arrow-top-hover: url(./icon/light/arrow-top-hover.svg);
+  --img-contacts: url(./icon/light/contacts.svg);
+  --img-calendar: url(./icon/light/calendar.svg);
+  --img-info: url(./icon/light/info.svg);
+  --img-my-vaccination:url(./icon/light/my-vaccination.svg);
+  --img-last-news:url(./icon/light/last-news.svg);
+  --img-my-forms:url(./icon/light/my-forms.svg);
+  --img-my-form: url(./icon/light/form.svg);
+  --img-my-form-active: url(./icon/light/form-active.svg); 
+  --img-switch-1: url(./icon/light/swith_1.svg);
+  --img-switch-2: url(./icon/light/swith_2.svg);
+  --img-switch-3: url(./icon/light/swith_3.svg);
+  --left-arrow: url(./icon/light/left-arrow.svg);
+  --right-arrow: url(./icon/light/right-arrow.svg);
+  --img-setting: url(./icon/light/setting.svg);
+  --img-delete: url(./icon/light/delete.svg);
+
+
+  --folder: url(./icon/light/open-folder.svg);
+  --close-folder: url(./icon/light/close-folder.svg);
+}
+
+[data-theme="dark"] {
+  --background-gradient: linear-gradient(to bottom, #1A1A2E, #16213E);
+  --text-color: #E5E5E5;
+  --text-color-data: #FFFFFF;
+  --scrollbar-color: #9A70FF #2F2F4F;
+  --bgc-header: #24243e;
+  --bgc-footer: #24243e;
+  --bgc-main-info: rgba(154, 112, 255, 0.75);
+  --bgc-block: #1B1B3A;
+  --bgc-button: #9A70FF;
+  --bgc-button-hover: #7D52D4;
+  --bgc-table: #222831;
+  --bgc-table-hover: #5B618E;
+  --bgc-switch-hover: #9A70FF;
+  --bgc-switch-active: #46D9A2;
+  --bgc-calendar: #222831;
+  --bgc-calendar-block: #2A2F41;
+  --bgc-calendar-block-hover: #383E56;
+  --bgc-calendar-title: #313A5A;
+  --bgc-info-block: rgba(154, 112, 255, 0.75);
+  --bgc-info-block-reserved: rgba(154, 112, 255, 0.75);
+  --bgc-years-selected: #9A70FF;
+  --bgc-section: #1B1B3A;
+  --bgc-vaccine-title: #2C2F54;
+
+  --border-switch-hover: #9A70FF;
+  --border-switch-active: #46D9A2;
+  --border-switch: #3A3F58;
+  --border-years: #3A3F58;
+  --border-section: #3A3F58;
+  --border-calendar-block-hover: #7D52D4;
+  --border-select: #3A3F58;
+  --border-select-focus: #9A70FF;
+  --border-select-hover: #7D52D4;
+  --border-color-teacher: #7D52D4;
+  --border-color-hover-teacher: #9A70FF;
+  --border-color-focus-teacher: #9A70FF;
+  --border-color-input: #7D52D4;
+  --border-color-hover-input: #9A70FF;
+  --border-color-focus-input: #9A70FF;
+
+  --color-button: #FFFFFF;
+  --color-hover-link-header: #9A70FF;
+  --color-link-header: #E5E5E5;
+  --color-back-top: #9A70FF;
+  --color-main: #9A70FF;
+  --color-main-info: #E5E5E5;
+  --color-info-block: #FBEFFF;
+  --color-info-block-active: #46D9A2;
+  --color-years-selected: #FFFFFF;
+  --color-line-hover: #9A70FF;
+
+  --color-info-hover-text: #7D52D4;
+  --color-info-active-text: #9A70FF;
+  --color-info-select-title: #9A70FF;
+
+  --color-calendar: #1B6CA8;
+  --color-contacts: #DD2593;
+  --color-info: #46D9A2;
+  --spiner-color: #9A70FF;
+  --spiner-border: #3A3F58;
+
+  --color-table-text: #E5E5E5;
+
+  --bgc-input: #2F2F4F;
+  --color-input: #E5E5E5;
+  --border-input: #9A70FF;
+  --bgc-input-hover: #3A3F58;
+  --border-input-hover: #7D52D4;
+  --bgc-input-focus: #1B1B3A;
+  --border-input-focus: #6A4FCF;
+  --bgc-input-active: #1B1B3A;
+  --border-input-active: #5A3DAA;
+
+  --input-placeholder-color-teacher: #7D52D4;
+
+  --box-shadow--color: rgba(0, 0, 0, 0.3);
+  --box-shadow-years--color: rgba(154, 112, 255, 0.6);
+  --box-shadow-years-buttton--color: rgba(220, 220, 225, 0.3);
+  --box-shadow-select: rgba(154, 112, 255, 0.5);
+  --box-shadow-focus-teacher: rgba(154, 112, 255, 0.5);
+
+  --bgc-good: rgba(70, 217, 162, 0.43);
+  --border-good: rgba(70, 217, 162, 0.43);
+  --bgc-upcoming: rgba(252, 249, 57, 0.75);
+  --border-upcoming: rgb(252, 249, 57);
+  --bgc-overdue: rgba(254, 98, 98, 0.43);
+  --border-overdue: rgba(254, 98, 98, 0.43);
+
+  --bgc-calendar-completed: rgba(70, 217, 162, 0.75);
+  --bgc-calendar-future: rgba(252, 249, 57, 0.75);
+  --bgc-calendar-not-done: rgba(254, 98, 98, 0.75);
+
+  --logo: url(./icon/dark/logo.png);
+  --language: url(./icon/dark/language.svg);
+  --them: url(./icon/dark/swithes.svg);
+  --exit: url(./icon/dark/exit.svg);
+  --user: url(./icon/dark/user.svg);
+  --page: url(./icon/dark/page.svg);
+
+  --language-hover: url(./icon/dark/language-hover.svg);
+  --them-hover: url(./icon/dark/swithes-hover.svg);
+  --exit-hover: url(./icon/dark/exit-hover.svg);
+  --user-hover: url(./icon/dark/user-hover.svg);
+  --page-hover: url(./icon/dark/page-hover.svg);
+  --arrow-top: url(./icon/dark/arrow-top.svg);
+  --arrow-top-hover: url(./icon/dark/arrow-top-hover.svg);
+  --img-contacts: url(./icon/dark/contacts.svg) ;
+  --img-calendar: url(./icon/dark/calendar.svg) ;
+  --img-info: url(./icon/dark/info.svg) ;
+  --img-my-vaccination:url(./icon/dark/my-vaccination.svg);
+  --img-last-news:url(./icon/dark/last-news.svg);
+  --img-my-forms:url(./icon/dark/my-forms.svg);
+  --img-my-form: url(./icon/dark/form.svg);
+  --img-my-form-active: url(./icon/dark/form-active.svg);
+  --img-switch-1: url(./icon/dark/swith_1.svg);
+  --img-switch-2: url(./icon/dark/swith_2.svg);
+  --img-switch-3: url(./icon/dark/swith_3.svg); 
+  --left-arrow: url(./icon/dark/left-arrow.svg);
+  --right-arrow: url(./icon/dark/right-arrow.svg);
+  --img-setting: url(./icon/dark/setting.svg);
+  --img-delete: url(./icon/dark/delete.svg);
+}
+
+.App {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Serif", serif;
+  font-style: italic;
+}
+
+.page-section {
+  flex: 1;
+  background: var(--background-gradient);
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}

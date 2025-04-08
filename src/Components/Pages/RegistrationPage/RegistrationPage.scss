@@ -1,0 +1,82 @@
+@import "../../mixins";
+
+.registration-page {
+
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+
+
+        &__conteiner {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            justify-content: space-between;
+
+            @include on-tablet {
+                flex-direction: row;
+            }
+        }
+
+        &__block {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            border: 1px solid var(--border-section);
+            background-color: var(--bgc-section);
+            gap: 15px;
+            padding: 20px;
+            width: 100%;
+
+            @include on-tablet {
+                width: 50%;
+            }
+        }
+    }
+
+    &__input {
+        @include custom-input();
+    }
+
+    &__button {
+        height: 40px;
+        width: 100%;
+        @include custom-button();
+
+        @include on-tablet {
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 300px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+
+        @include on-desktop {
+            width: 400px;
+        }
+
+
+        &__conteiner {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+
+            @include on-desktop {
+                flex-direction: row;
+            }
+        }
+    }
+
+
+    &__error-message {
+        @include error-message();
+    }
+}

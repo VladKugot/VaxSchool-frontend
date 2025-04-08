@@ -1,0 +1,47 @@
+.my-teacher {
+    display: flex;
+    flex-direction: column;
+
+    &__filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &--input {
+            box-sizing: border-box;
+            width: 200px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid var(--border-color-teacher);
+            border-radius: 8px;
+            padding: 10px;
+            color: var(--color-main);
+            font-weight: 600;
+            font-family: "Roboto Condensed", sans-serif;
+            transition: all 0.3s ease;
+
+            &:focus {
+                outline: none;
+                border-color: var(--border-color-hover-teacher);
+                box-shadow: 0 0 10px var(--box-shadow-focus-teacher);
+            }
+
+            &::placeholder {
+                color: var(--input-placeholder-color-teacher);
+                font-weight: normal;
+            }
+
+            &:hover {
+                border-color: var(--border-color-hover-teacher);
+            }
+        }
+    }
+
+    &__error {
+        margin-top: 40px;
+    }
+
+    &__spinner {
+        margin-top: 50px;
+    }
+}

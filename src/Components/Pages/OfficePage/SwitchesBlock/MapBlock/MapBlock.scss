@@ -1,0 +1,16 @@
+@import './../../../../mixins';
+
+.map {
+    height: 630px;
+    width: 100%;
+    border: 1px solid var(--border-switch);
+    border-radius: 10px;
+
+    @include on-tablet {
+        height: 530px;
+    }
+
+    @include on-desktop {
+        height: 450px;
+    }  
+}

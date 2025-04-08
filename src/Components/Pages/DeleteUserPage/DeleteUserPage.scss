@@ -1,0 +1,23 @@
+@import '../../mixins';
+
+.delete-user-page {
+
+    &__conteiner {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 50%;
+
+        @include on-tablet {
+            gap: 32px;
+        }
+    }
+
+    &__input {
+        @include custom-input();
+    }
+
+    &__error-message {
+        @include error-message();
+    }
+}

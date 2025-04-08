@@ -1,0 +1,110 @@
+@import '../../../mixins';
+
+.vaccine-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    justify-content: center;
+
+    &__empty {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__spinner {
+        height: 100%;
+    }
+
+
+    &__title {
+        display: flex;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 5px;
+        background-color: var(--bgc-vaccine-title);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+        &--main {
+            font-weight: 500;
+            display: flex;
+            font-size: 18px;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        &--black {
+            color: var(--text-color-data);
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__item {
+        margin: 0;
+        margin-left: 15px;
+        padding: 5px 0 5px;
+
+        &--black {
+            color: var(--text-color-data);
+            font-weight: 500;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        &--big {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            @include on-desktop {
+                gap: 20px;
+            }
+
+            &--reverse {
+
+                @include on-tablet {
+                    flex-direction: column-reverse;
+                }
+
+                @include on-desktop {
+                    flex-direction: column;  
+                }
+            }
+        }
+
+        &--main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+
+            @include on-tablet {
+                flex-direction: row;
+            }
+        
+            @include on-desktop {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}

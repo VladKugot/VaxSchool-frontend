@@ -1,0 +1,20 @@
+@import './mixins';
+
+.text {
+  &__title {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 800px;
+    margin: 0;
+
+    @include on-tablet {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    @include on-desktop {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+}

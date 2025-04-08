@@ -1,0 +1,26 @@
+@import '../../mixins';
+
+.not-found-page {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url(../../../icon/not-page.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 50vh;
+    }
+
+    &__btn {
+        display: flex;
+        width: 400px;
+        height: 40px;
+        text-align: center;
+        text-decoration: none;
+        
+        @include custom-button();
+    }
+}

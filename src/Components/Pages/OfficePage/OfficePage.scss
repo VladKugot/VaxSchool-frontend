@@ -1,0 +1,159 @@
+@import '../../mixins';
+
+.office-page {
+    @include contest-pading-inline;
+
+    font-family: "Roboto Condensed", sans-serif;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include on-tablet {
+        gap: 64px;
+    }
+
+    @include on-desktop {
+        gap: 80px;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        &--switches {
+            flex-direction: column;
+            gap: 16px;
+
+            @include on-tablet {
+                height: 714px;
+                gap: 64px;
+            }
+
+            @include on-desktop {
+                flex-direction: row;
+                height: 450px;
+                gap: 30px;
+            }
+        }
+
+
+        &__main {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            border-radius: 10px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px var(--box-shadow--color);
+
+            @include on-tablet {
+                gap: 40px;
+                padding: 10px;
+            }
+
+            @include on-desktop {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        &__title {
+            margin: 0;
+            font-size: 24px;
+
+            @include on-tablet {
+                font-size: 32px;
+            }
+        }
+
+        &__img {
+            height: 32px;
+            width: 32px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @include on-tablet {
+                height: 64px;
+                width: 64px;
+            }
+
+            &--my-vaccination {
+                background-image: var(--img-my-vaccination);
+            }
+
+            &--last-news {
+                background-image: var(--img-last-news);
+            }
+
+            &--my-forms {
+                background-image: var(--img-my-forms);
+            }
+
+            &--setting {
+                background-image: var(--img-setting);
+            }
+        }
+    }
+
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include on-desktop {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            gap: 50px;
+        }
+    }
+
+    &__block-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 25px;
+
+        &__link {
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-color);
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px var(--box-shadow--color);
+
+            @include hover(transform, scale(1.05));
+
+            &:hover {
+                background-color: var(--bgc-table);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        margin-top: 24px;
+        font-weight: 500;
+        font-family: "Roboto Serif", serif;
+
+        @include on-tablet {
+            margin-top: 32px;
+            font-size: 48px;
+        }
+
+        @include on-desktop {
+            margin-top: 70px;
+            font-size: 64px;
+        }
+    }
+}

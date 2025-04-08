@@ -1,0 +1,188 @@
+@import '../mixins';
+
+.header {
+  height: 48px;
+  width: 100%;
+  background-color: var(--bgc-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px var(--box-shadow--color);
+  z-index: 10;
+
+  @include on-desktop {
+    height: 64px;
+  }
+
+  &__logo {
+    height: 48px;
+
+    background-image: var(--logo);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include on-desktop {
+      height: 64px;
+      padding-inline: 40px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    @include on-desktop {
+      gap: 40px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+
+  @include on-desktop {
+    gap: 100px;
+  }
+
+  &__obj {
+    list-style: none;
+
+    @include underline-hover(var(--color-hover-link-header));
+
+    &:hover .nav__link {
+      transform: scale(1.05);
+      color: (var(--color-hover-link-header));
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-link-header);
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+
+    @include on-desktop {
+      margin-right: 25px;
+    }
+
+    &--img {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.swithes {
+  &__main {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    margin-right: 8px;
+
+    @include on-desktop {
+      gap: 200px;
+      margin-right: 40px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+  }
+}
+
+.button { 
+  border: none;
+  height: 16px;
+  width: 16px;
+  margin: 8px;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--bgc-header);
+
+  &__block{
+    display: flex; 
+    flex-direction: row;
+    gap: 8px;
+    text-decoration: none;
+
+    @include underline-hover(var(--color-hover-link-header));
+
+    &--text {
+      display: flex;
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--color-link-header);
+      font-weight: 800;
+      align-items: center;
+      font-family: "Roboto Serif", serif;
+      font-style: italic;
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    &:hover &--text {
+      transform: scale(1.05);
+      color: var(--color-hover-link-header);
+    }
+  }
+
+  @include on-tablet {
+    @include hover(transform, scale(1.2));
+  }
+
+  &--language {
+    background-image: var(--language);
+    &:hover{
+      background-image: var(--language-hover);
+    }
+  }
+  
+  &--them {
+    background-image: var(--them);
+    width: 18px;
+    height: 9px;
+    &:hover{
+      background-image: var(--them-hover);
+    }
+  }
+
+  &--exit {
+    background-image: var(--exit);
+    &:hover{
+      background-image: var(--exit-hover);
+    }
+  }
+
+  &--user {
+    background-image: var(--user);
+    &:hover{
+      background-image: var(--user-hover);
+    }
+  }
+
+  &--page {
+    background-image: var(--page);
+    &:hover{
+      background-image: var(--page-hover);
+    }
+  }
+
+}

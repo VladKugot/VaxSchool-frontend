@@ -1,0 +1,1 @@
+export const API_URL = "https://vaxschool-backend-production.up.railway.app/";

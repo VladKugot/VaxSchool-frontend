@@ -1,0 +1,38 @@
+@import '../mixins';
+
+.page {
+    @include contest-pading-inline;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-bottom: 32px;
+
+    @include on-tablet {
+        margin-top: 32px;
+        margin-bottom: 64px;
+        gap: 64px;
+    }
+
+    @include on-tablet {
+        margin-top: 64px;
+        margin-bottom: 80px;
+        gap: 80px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 28px;
+        margin: 0;
+        margin-left: 40px;
+        font-family: "Roboto Serif", serif;
+
+        @include on-tablet {
+            font-size: 32px;
+        }
+
+        @include on-desktop {
+            font-size: 40px;
+        }
+    }
+}
