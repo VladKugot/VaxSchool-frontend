@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/VaxSchool-frontend/static/css/main.01f50f63.css",
-    "main.js": "/VaxSchool-frontend/static/js/main.f7ed5605.js",
+    "main.js": "/VaxSchool-frontend/static/js/main.77a39673.js",
     "static/media/bg-image.png": "/VaxSchool-frontend/static/media/bg-image.ed5cf6e14dccd4188be6.png",
     "static/media/not-page.svg": "/VaxSchool-frontend/static/media/not-page.8384852b28c2b5e9d603.svg",
     "static/media/logo.png": "/VaxSchool-frontend/static/media/logo.ddf1e3788859d72af83f.png",
@@ -36,10 +36,10 @@
     "static/media/swithes-hover.svg": "/VaxSchool-frontend/static/media/swithes-hover.fbff164b185dff0dafb1.svg",
     "static/media/swithes.svg": "/VaxSchool-frontend/static/media/swithes.301be4616487c9d8c197.svg",
     "main.01f50f63.css.map": "/VaxSchool-frontend/static/css/main.01f50f63.css.map",
-    "main.f7ed5605.js.map": "/VaxSchool-frontend/static/js/main.f7ed5605.js.map"
+    "main.77a39673.js.map": "/VaxSchool-frontend/static/js/main.77a39673.js.map"
   },
   "entrypoints": [
     "static/css/main.01f50f63.css",
-    "static/js/main.f7ed5605.js"
+    "static/js/main.77a39673.js"
   ]
 }
